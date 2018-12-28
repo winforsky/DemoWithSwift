@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         addLayer()
         addCatLayView()
         addImage()
+        addArcImage()
     }
     
     func addLayer() {
@@ -56,6 +57,19 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         view.addSubview(imageView)
         
+    }
+    
+    func addArcImage() {
+        let imageView = UIImageView(image: UIImage(named: "xxx"))
+        imageView.frame = CGRect(x: 10, y: 600, width: 200, height: 200)
+
+        //高性能设置圆角
+        let path = UIBezierPath(roundedRect: imageView.bounds, byRoundingCorners: UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue | UIRectCorner.topRight.rawValue), cornerRadii: CGSize(width: 100, height: 100))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = imageView.bounds
+        maskLayer.path = path.cgPath
+        imageView.layer.mask = maskLayer
+        view.addSubview(imageView)
     }
     
 }
