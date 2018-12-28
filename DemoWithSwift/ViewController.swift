@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         addLayer()
+        addCatLayView()
+        addImage()
     }
     
     func addLayer() {
@@ -33,6 +35,27 @@ class ViewController: UIViewController {
         layer.path = bezier.cgPath
         layer.fillColor = UIColor.black.cgColor
         view.layer.addSublayer(layer)
+    }
+    
+    func addCatLayView() {
+        let catLayView = CatLayView()
+        catLayView.frame = CGRect(x: 10, y: 80, width: 300, height: 200)
+        view.addSubview(catLayView)
+    }
+    
+    func addImage() {
+        let imageView = UIImageView(image: UIImage(named: "xxx"))
+        
+        imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        imageView.center = view.center
+        //高性能设置圆角
+        UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, UIScreen.main.scale)
+        UIBezierPath(roundedRect: imageView.bounds, cornerRadius: imageView.bounds.width).addClip()
+        imageView.draw(imageView.bounds)
+        imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        view.addSubview(imageView)
+        
     }
     
 }
