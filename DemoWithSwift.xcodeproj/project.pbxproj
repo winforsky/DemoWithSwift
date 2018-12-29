@@ -15,6 +15,7 @@
 		67D544B721D6365E009EAD01 /* DemoWithSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D544B621D6365E009EAD01 /* DemoWithSwiftTests.swift */; };
 		67D544C221D6365E009EAD01 /* DemoWithSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D544C121D6365E009EAD01 /* DemoWithSwiftUITests.swift */; };
 		67D544D021D6542A009EAD01 /* CatLayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D544CF21D6542A009EAD01 /* CatLayView.swift */; };
+		67D544D321D74BB7009EAD01 /* ResponderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D544D221D74BB7009EAD01 /* ResponderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		67D544C121D6365E009EAD01 /* DemoWithSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoWithSwiftUITests.swift; sourceTree = "<group>"; };
 		67D544C321D6365E009EAD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67D544CF21D6542A009EAD01 /* CatLayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatLayView.swift; sourceTree = "<group>"; };
+		67D544D221D74BB7009EAD01 /* ResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		67D544A021D6365B009EAD01 /* DemoWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				67D544D121D74B99009EAD01 /* Responder */,
 				67D544A121D6365B009EAD01 /* AppDelegate.swift */,
 				67D544A321D6365B009EAD01 /* ViewController.swift */,
 				67D544A521D6365B009EAD01 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				67D544C321D6365E009EAD01 /* Info.plist */,
 			);
 			path = DemoWithSwiftUITests;
+			sourceTree = "<group>";
+		};
+		67D544D121D74B99009EAD01 /* Responder */ = {
+			isa = PBXGroup;
+			children = (
+				67D544D221D74BB7009EAD01 /* ResponderViewController.swift */,
+			);
+			path = Responder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67D544A421D6365B009EAD01 /* ViewController.swift in Sources */,
+				67D544D321D74BB7009EAD01 /* ResponderViewController.swift in Sources */,
 				67D544D021D6542A009EAD01 /* CatLayView.swift in Sources */,
 				67D544A221D6365B009EAD01 /* AppDelegate.swift in Sources */,
 			);
